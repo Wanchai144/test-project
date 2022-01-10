@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="texterror"
+            type="String" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/custom_dialog_background"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <ImageView
+            android:id="@+id/tv_title"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/permiss_map"
+            tools:ignore="RelativeOverlap,SpUsage" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:paddingLeft="@dimen/margin_large"
+            android:paddingRight="@dimen/margin_large"
+            android:text="@{title}"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            tools:ignore="RelativeOverlap,SpUsage" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:paddingLeft="@dimen/margin_large"
+            android:paddingRight="@dimen/margin_large"
+            android:id="@+id/text_error"
+            android:text="@{texterror}"
+            android:textColor="@color/lineColorGrayBtn"
+            android:textSize="@dimen/text_size_normal16"
+            tools:ignore="RelativeOverlap,SpUsage" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent" />
+
+
+        <Button
+            android:id="@+id/tvOkey"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/ic_button_orange"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="confirm"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_medium"
+            tools:ignore="RelativeOverlap" />
+
+        <Button
+            android:id="@+id/tv_cancle"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/ic_button_orange"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="cancel"
+            style="?android:attr/borderlessButtonStyle"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_medium"
+            tools:ignore="RelativeOverlap" />
+
+
+    </LinearLayout>
+
+</layout>
