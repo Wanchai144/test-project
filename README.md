@@ -7,14 +7,20 @@ Sample Weather App
 
 
 
-Architecture
+**Architecture**
 
 MVVM  Clean Architecture
 
-Dependency Injection
+**Dependency Injection**
 
 Hilt
 
-Threading
+**Threading**
 
 Coroutines
+
+
+**อนาคตสามารถค้นหาที่อยู่ที่เราต้องการได้ง่ายยิ่งขึ้น เช่น สามารถ search map เพื่อง่ายต่อการค้นหาสถานที่นั้นๆ**
+
+
+
