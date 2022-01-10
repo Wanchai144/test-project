@@ -82,9 +82,4 @@ class Preferences @Inject constructor(@ApplicationContext private var context: C
     fun getSharedPreferences(): SharedPreferences {
         return context.getSharedPreferences(FILENAME, Context.MODE_PRIVATE)
     }
-
-
-
-
-
 }
