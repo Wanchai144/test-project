@@ -38,9 +38,6 @@ class MainFragment : Fragment(R.layout.fragment_main) {
 
     private val viewModel: MainViewModel by viewModels()
 
-
-    lateinit var utils: Utils
-
     var requestPermissions =  RequestPermissions()
 
     lateinit var mFusedLocationClient: FusedLocationProviderClient
@@ -79,31 +76,31 @@ class MainFragment : Fragment(R.layout.fragment_main) {
             val temp_max = it.temp_max!! - 273.15
             tvCity.text = "Country ${it.country}"
             tvHumidity.text = "Humidity ${it.humidity} %"
-            tvTemp.text = "Temp ${utils.formatdouble(temp)} °C"
-            tvTempMin.text = "Temp_min ${utils.formatdouble(temp_min)} °C"
-            tvTempMax.text = "Temp_max ${utils.formatdouble(temp_max)} °C"
+            tvTemp.text = "Temp ${Utils().formatdouble(temp)} °C"
+            tvTempMin.text = "Temp_min ${Utils().formatdouble(temp_min)} °C"
+            tvTempMax.text = "Temp_max ${Utils().formatdouble(temp_max)} °C"
             tvError.gone()
-            tvDateTime.text = utils.formatDt(it.date_time!!.toLong())
+            tvDateTime.text = Utils().formatDt(it.date_time!!.toLong())
 
             btC.setOnClickListener { res ->
-                tvDateTime.text = utils.formatDt(it.date_time!!.toLong())
+                tvDateTime.text = Utils().formatDt(it.date_time!!.toLong())
                 tvCity.text = "Country ${it.country}"
                 tvHumidity.text = "Humidity ${it.humidity} %"
-                tvTemp.text = "Temp ${utils.formatdouble(temp)} °C"
-                tvTempMin.text = "Temp_min ${utils.formatdouble(temp_min)} °C"
-                tvTempMax.text = "Temp_max ${utils.formatdouble(temp_max)} °C"
+                tvTemp.text = "Temp ${Utils().formatdouble(temp)} °C"
+                tvTempMin.text = "Temp_min ${Utils().formatdouble(temp_min)} °C"
+                tvTempMax.text = "Temp_max ${Utils().formatdouble(temp_max)} °C"
             }
 
             btF.setOnClickListener {  its ->
                 val temp_f = 1.8 * temp + 32
                 val temp_min_f = 1.8 * temp_min + 32
                 val temp_max_f = 1.8 * temp_max + 32
-                tvDateTime.text = utils.formatDt(it.date_time!!.toLong())
+                tvDateTime.text = Utils().formatDt(it.date_time!!.toLong())
                 tvCity.text = "Country ${it.country}"
                 tvHumidity.text = "Humidity ${it.humidity} %"
-                tvTemp.text = "Temp ${utils.formatdouble(temp_f)} °F"
-                tvTempMin.text = "Temp_min ${utils.formatdouble(temp_min_f)} °F"
-                tvTempMax.text = "Temp_max ${utils.formatdouble(temp_max_f)} °F"
+                tvTemp.text = "Temp ${Utils().formatdouble(temp_f)} °F"
+                tvTempMin.text = "Temp_min ${Utils().formatdouble(temp_min_f)} °F"
+                tvTempMax.text = "Temp_max ${Utils().formatdouble(temp_max_f)} °F"
             }
         })
         viewModel.onErrorDataWeatherInfo().observe(viewLifecycleOwner, {
