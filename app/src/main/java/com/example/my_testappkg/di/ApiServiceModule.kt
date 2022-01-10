@@ -29,10 +29,6 @@ object NetworkModule {
     fun provideBaseUrl() = Constant.BASE_URL
 
 
-//    @Provides
-//    fun providesPreference() = Preferences
-
-
     @Provides
     fun provideLoggingInterceptor() =
         HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
@@ -78,21 +74,6 @@ object NetworkModule {
 
 
 }
-
-//    @Provides
-//    @Singleton
-//    fun provideCoinRepository(api: CoinPaprikaApi): CoinRepository {
-//        return CoinRepositoryImpl(api)
-//    }
-
-//val apiServiceModule = module {
-//    single { provideOkHttp(get()) }
-//    single { provideRetrofitService(get()) }
-////    single<APIService> {
-////        BaseHttpClient.ApiScalarsAndGsonBuilder().build()
-////    }
-//}
-
 
 
 

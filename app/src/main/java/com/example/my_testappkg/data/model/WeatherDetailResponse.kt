@@ -9,8 +9,6 @@ data class WeatherDetailResponse(
     val clouds: Clouds?= null,
     @SerializedName("cod")
     val cod: Int?= 0,
-//    @SerializedName("coord")
-//    val coord: Coord? = null,
     @SerializedName("dt")
     val dt: Int?= 0,
     @SerializedName("id")
@@ -33,13 +31,6 @@ data class Clouds(
     @SerializedName("all")
     val all: Int?= 0
 )
-//
-//data class Coord(
-//    @SerializedName("lat")
-//    val lat: Double? =  0.0,
-//    @SerializedName("lon")
-//    val lon:Double? =  0.0
-//)
 
 data class Main(
     @SerializedName("feels_like")
