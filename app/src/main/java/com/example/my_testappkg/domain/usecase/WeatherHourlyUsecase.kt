@@ -1,8 +1,6 @@
 package com.example.my_testappkg.domain.usecase
 
-import com.example.my_testappkg.data.model.Weather
 import com.example.my_testappkg.data.model.WeatherHourly
-import com.example.my_testappkg.data.repository.WeatherDetailRepository
 import com.example.my_testappkg.data.repository.WeatherHourlyRepository
 import com.example.my_testappkg.presentation.base.ResultResponse
 import kotlinx.coroutines.flow.Flow

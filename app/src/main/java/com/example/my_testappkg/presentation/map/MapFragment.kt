@@ -107,14 +107,6 @@ class MapFragment : Fragment(R.layout.fragment_map), OnMapReadyCallback, GoogleM
 
 
     private fun onAction(map: GoogleMap) {
-//        binding.btnZoomIn.setOnClickListener {
-//            map.animateCamera(CameraUpdateFactory.zoomIn())
-//
-//        }
-//        binding.btnZoomOut.setOnClickListener {
-//            map.animateCamera(CameraUpdateFactory.zoomOut())
-//        }
-
         binding.btnChangeMyLocation.setOnClickListener {
             moveCameraToCurrentLocation()
         }

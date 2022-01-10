@@ -13,8 +13,6 @@ class Preferences @Inject constructor(@ApplicationContext private var context: C
 
     companion object {
         const val FILENAME = "user_preference"
-        const val PREF_VERSION_CODE_KEY = "version_code"
-        const val DOESNT_EXIST = -1
         const val LATITUDE = "LATITUDE"
         const val LONGITUDE = "LONGITUDE"
         const val LocationDefault = "LocationDefault"

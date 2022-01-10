@@ -14,8 +14,7 @@ import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flowOn
 import javax.inject.Inject
 
-//class MainViewModel() : BaseViewModel<Any, ViewEffect>() {
-//}
+
 @HiltViewModel
 class MainViewModel  @Inject constructor(
     private val weather: WeatherDetailUsecase

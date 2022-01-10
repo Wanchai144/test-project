@@ -56,9 +56,6 @@ object NetworkModule {
         retrofit.create(APIService::class.java)
 
 
-
-
-
     @Singleton
     @Provides
     fun provideWeatherRepository(adiService: APIService) : WeatherDetailRepository {
